@@ -1,15 +1,17 @@
 import Image from "next/image";
 import ownerImage from "../../../public/ownerImage.jpg";
 
+// ownerImage component
 const OwnerImage: React.FC = () => {
   return (
-    <div className="flex justify-center items-start">
-      <div className="overflow-hidden rounded-full w-32 h-32 md:w-60 md:h-60 lg:w-80 lg:h-80">
+    // display Image
+    <div className="flex items-start justify-center">
+      <div className="h-32 w-32 overflow-hidden rounded-full md:h-60 md:w-60 lg:h-80 lg:w-80">
         <Image
           priority={true}
           src={ownerImage}
           alt="Owner"
-          className="object-cover w-full h-full"
+          className="h-full w-full object-cover"
         />
       </div>
     </div>
