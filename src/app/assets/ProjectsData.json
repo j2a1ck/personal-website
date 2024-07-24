@@ -1,0 +1,14 @@
+[
+  {
+    "id": 2,
+    "title": "Personal website",
+    "description": "A minimal personal/portfolio website built with Next.js, React",
+    "link": "https://github.com/j2a1ck/personal-website"
+  },
+  {
+    "id": 1,
+    "title": "React Todo app",
+    "description": "A simple todo list application built with React",
+    "link": "https://github.com/j2a1ck/React-Todo-App"
+  }
+]

@@ -1,26 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Roboto, Sanchez } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 const roboto = Roboto({
   weight: "700",
   subsets: ["latin"],
 });
 
-export const sanchez = Sanchez({
-  style: "normal",
-  subsets: ["latin"],
-  weight: "400",
-});
-
 export const metadata: Metadata = {
   title: "Jack",
-  description: "information about Jack",
-  icons: {
-      icon: "/favicon.ico"
-    }
+  description: "Information about Jack",
 };
-
 
 export default function RootLayout({
   children,
@@ -29,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <main>
+          <Navbar />
+          {children}
+        </main>
+      </body>
     </html>
   );
 }

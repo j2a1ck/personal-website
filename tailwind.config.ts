@@ -9,9 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-       "white": "#B4B4B4",
-       "navy-blue": "#183154",
-       "gray-lite": "#727478"
+        "black-lite": "#171717",
+        "white": "#B4B4B4",
+        "navy-blue": "#183154",
+        "gray-lite": "#727478",
+        "indigo": "#10172A",
+        "gray": "#1E293B",
+        "white-bright": "#CBD5E1",
+        "gray-project": "#99A4B1",
+        "white-white": "#FFFFFF"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

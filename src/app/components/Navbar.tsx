@@ -1,29 +1,49 @@
-import Link from "next/link"
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Links = [
-  { href: "/", label: "home"} ,
-  { href: "/information", label: "information"},
-  { href: "/project", label: "project"},
-  { href: "/contact", label: "contact"},
-]
+  { href: "/", label: "Home" },
+  { href: "/information", label: "Information" },
+  { href: "/projects", label: "Projects" },
+  { href: "/contact", label: "Contact" },
+];
 
 const Navbar: React.FC = () => {
-  return <>
-    <nav className="flex flex-wrap justify-center w-auto h-auto text-sm md:text-lg lg:text-lg text-white">
-     <div className="border-black border-4 rounded-full m-3 p-2">
-      {Links.map(({ href, label: label }) => (
-        <Link
-          key={href}
-          href={href}
-          className="px-2 py-1 m-auto  md:mx-5 lg:mx-5 font-medium hover:bg-gray-800 rounded-lg "
-        >
-          {label}
-        </Link>
-      ))}
+  const pathname = usePathname();
+
+  const navbarClass = () => {
+    switch (pathname) {
+      case "/":
+        return "bg-black-lite";
+      case "/projects":
+        return "bg-indigo";
+      default:
+        return "bg-black-lite";
+    }
+  };
+
+  const isActive = (href: string) => pathname === href;
+
+  return (
+    <nav
+      className={`flex h-auto w-auto flex-wrap justify-center text-xs text-white md:text-lg lg:text-lg ${navbarClass()}`}
+    >
+      <div className="m-3 rounded-full border-4 border-black p-2">
+        {Links.map(({ href, label }) => (
+          <Link
+            key={href}
+            href={href}
+            className={`m-auto rounded-lg px-2 py-1 font-extrabold hover:bg-slate-900 md:mx-5 lg:mx-5 ${
+              isActive(href) ? "bg-slate-900" : "text-white hover:bg-sky-950"
+            }`}
+          >
+            {label}
+          </Link>
+        ))}
       </div>
     </nav>
-    </>
-  ;
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

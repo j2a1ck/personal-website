@@ -3,5 +3,19 @@
 @tailwind utilities;
 
 body {
-    background-color: #171717;
+  background-color: #171717;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+@layer components {
+  .button {
+    border-radius: 8px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 60%;
+    height: auto;
+    background-color: #06080f;
+    color: #ffff;
+  }
 }
