@@ -23,7 +23,7 @@ const SocialMediaLinks = [
 const SocialMedia: React.FC = () => {
   return (
     // display social media icons and link to their sites
-    <div className="flex justify-items-start space-x-2">
+    <div className="flex justify-items-start space-x-3">
       {SocialMediaLinks.map((link) => (
         <a
           href={link.url}
