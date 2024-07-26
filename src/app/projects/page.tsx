@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
               {project.description}
             </p>
             <a href={project.link} target="_blank">
-            <button className="button">visit project</button>
+            <button className="button">Visit project</button>
             </a>
           </div>
         ))}

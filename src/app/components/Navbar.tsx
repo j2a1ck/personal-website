@@ -27,15 +27,15 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`flex h-auto w-auto flex-wrap justify-center text-xs text-white md:text-lg lg:text-lg ${navbarClass()}`}
+      className={`flex h-auto w-auto flex-wrap justify-center text-xs text-white md:text-sm lg:text-sm ${navbarClass()}`}
     >
       <div className="m-3 rounded-full border-4 border-black p-2">
         {Links.map(({ href, label }) => (
           <Link
             key={href}
             href={href}
-            className={`m-auto rounded-lg px-2 py-1 font-extrabold hover:bg-slate-900 md:mx-5 lg:mx-5 ${
-              isActive(href) ? "bg-slate-900" : "text-white hover:bg-sky-950"
+            className={`m-auto rounded-lg px-2 py-1 font-extrabold hover:bg-sky-900 md:mx-5 lg:mx-5 ${
+              isActive(href) ? "bg-slate-900" : ""
             }`}
           >
             {label}

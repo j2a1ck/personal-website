@@ -1,32 +1,21 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faTelegram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import linkedin from "../../../public/linkedin.svg";
+import telegram from "../../../public/telegram.svg";
+import github from "../../../public/github.svg";
+import discord from "../../../public/discord.svg";
+import Image from "next/image";
 
-// Array of social media link objects
 const SocialMediaLinks = [
+  { src: telegram, alt: "telegram", url: "https://t.me/j2a1ckbot" },
+  { src: github, alt: "github", url: "https://github.com/j2a1ck" },
   {
-    href: "https://t.me/j2a1ckbot",
-    icon: (
-      <FontAwesomeIcon icon={faTelegram} className="h-5 w-max md:h-7 lg:h-7" />
-    ),
-    label: "Telegram",
+    src: linkedin,
+    alt: "linkedin",
+    url: "https://www.linkedin.com/in/j2a1ck/",
   },
   {
-    href: "https://github.com/j2a1ck",
-    icon: (
-      <FontAwesomeIcon icon={faGithub} className="h-5 w-max md:h-7 lg:h-7" />
-    ),
-    label: "Github",
-  },
-  {
-    href: "https://www.linkedin.com/in/j2a1ck/",
-    icon: (
-      <FontAwesomeIcon icon={faLinkedin} className="h-5 w-max md:h-7 lg:h-7" />
-    ),
-    label: "Linkedin",
+    src: discord,
+    alt: "discord",
+    url: "https://discordapp.com/users/j2a1ck",
   },
 ];
 
@@ -34,10 +23,15 @@ const SocialMediaLinks = [
 const SocialMedia: React.FC = () => {
   return (
     // display social media icons and link to their sites
-    <div className="flex justify-items-start">
-      {SocialMediaLinks.map((link, index) => (
-        <a className="px-2" key={index} href={link.href} target="_blank">
-          {link.icon}
+    <div className="flex justify-items-start space-x-2">
+      {SocialMediaLinks.map((link) => (
+        <a
+          href={link.url}
+          key={link.alt}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image src={link.src} alt={link.alt} width={30} height={30} />
         </a>
       ))}
     </div>
