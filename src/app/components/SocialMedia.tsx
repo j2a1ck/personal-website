@@ -31,7 +31,7 @@ const SocialMedia: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src={link.src} alt={link.alt} width={30} height={30} />
+          <Image src={link.src} alt={link.alt} className="w-4 md:w-8 lg:w-8" />
         </a>
       ))}
     </div>
