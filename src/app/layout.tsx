@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Viewport } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
