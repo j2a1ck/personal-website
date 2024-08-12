@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-function useMediaQuery(query: any) {
+// Custom hook to determine if a media query matches the current screen size
+function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
@@ -8,10 +9,10 @@ function useMediaQuery(query: any) {
     const handleChange = () => setMatches(mediaQuery.matches);
 
     setMatches(mediaQuery.matches);
-    mediaQuery.addListener(handleChange);
+    mediaQuery.addEventListener("change", handleChange);
 
     return () => {
-      mediaQuery.removeListener(handleChange);
+      mediaQuery.removeEventListener("change", handleChange);
     };
   }, [query]);
 
