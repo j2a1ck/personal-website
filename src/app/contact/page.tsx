@@ -8,6 +8,7 @@ import telegram from "../../../public/telegram.svg";
 import github from "../../../public/github.svg";
 import discord from "../../../public/discord.svg";
 
+// Array of social media links and etc
 const socialMediaLinks = [
   { src: telegram, alt: "telegram", url: "https://t.me/j2a1ckbot" },
   { src: github, alt: "github", url: "https://github.com/j2a1ck" },
@@ -32,10 +33,11 @@ function handleClick(): void {
   alert("Email:   jack.70aw@gmail.com");
 }
 
+// contact component
 const Contact: React.FC = () => {
   return (
     <div className="flex flex-col items-center">
-      <div className="m-auto mt-6 flex h-44 w-44 justify-center overflow-hidden rounded-full md:h-40 md:w-40 lg:mt-4 lg:h-48 lg:w-48">
+      <div className="m-auto mt-10 flex h-44 w-44 justify-center overflow-hidden rounded-full md:h-40 md:w-40 lg:mt-4 lg:h-48 lg:w-48">
         <Image
           priority={true}
           src={ownerImage}

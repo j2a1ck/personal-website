@@ -4,11 +4,13 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
+// Font 
 const roboto = Roboto({
   weight: "700",
   subsets: ["latin"],
 });
 
+// set viewport and scale 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -16,11 +18,13 @@ export const viewport: Viewport = {
   userScalable: false,
 }
 
+// Metadata of site
 export const metadata: Metadata = {
   title: "Jack",
-  description: "Information about Jack",
+  description: "Information",
 };
 
+// RootLayout component
 export default function RootLayout({
   children,
 }: Readonly<{

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+// Array of navigation links to site pages
 const Links = [
   { href: "/", label: "Home" },
   { href: "/information", label: "Information" },
@@ -9,9 +10,11 @@ const Links = [
   { href: "/contact", label: "Contact" },
 ];
 
+// Navbar component
 const Navbar: React.FC = () => {
   const pathname = usePathname();
 
+  // Function for apply different css base on path
   const navbarClass = () => {
     switch (pathname) {
       case "/":

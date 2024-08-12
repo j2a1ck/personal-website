@@ -4,10 +4,10 @@ import SocialMedia from "./SocialMedia";
 const OwnerText: React.FC = () => {
   return (
     <div>
-      <h1 className="text-sm text-white lg:text-base"> My name is</h1>
-      <h2 className="px-8 pt-4 text-6xl font-extrabold text-navy-blue md:text-9xl lg:text-9xl">
+      <h2 className="text-sm text-white lg:text-base"> My name is</h2>
+      <h1 className="px-8 pt-4 text-6xl font-extrabold text-navy-blue md:text-9xl lg:text-9xl">
         Jack
-      </h2>
+      </h1>
       <h3 className="w-25 h-10 pt-12 text-xs font-bold text-gray-lite md:text-base lg:text-2xl">
         Newcomer to front-end development
       </h3>

@@ -1,9 +1,10 @@
 import ProjectsData from "../assets/ProjectsData.json";
 
+// Projects component
 const Projects: React.FC = () => {
   return (
     <div className="min-h-screen bg-indigo">
-      <h1 className="flex justify-start p-7 px-10 pb-2 text-3xl font-bold text-white-white">
+      <h1 className="flex justify-start px-10 pb-2 pt-10 text-3xl font-bold text-white-white lg:p-7">
         My Projects
       </h1>
       <canvas className="mx-10 flex h-2 w-32 justify-start bg-sky-700"></canvas>
@@ -18,7 +19,7 @@ const Projects: React.FC = () => {
               {project.description}
             </p>
             <a href={project.link} target="_blank">
-            <button className="button">Visit project</button>
+              <button className="button">Visit project</button>
             </a>
           </div>
         ))}
