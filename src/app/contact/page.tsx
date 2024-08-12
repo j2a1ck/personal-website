@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
           className="object-cover"
         />
       </div>
-      <h1 className="flex justify-center pt-7 font-bold text-white-white lg:pt-3 lg:text-lg">
+      <h1 className="flex justify-center pt-6 font-bold text-white-white lg:pt-3 lg:text-lg">
         Jack
       </h1>
       <h2 className="flex justify-center font-serif text-sm font-extralight text-white lg:text-sm">
